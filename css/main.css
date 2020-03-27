@@ -1,0 +1,123 @@
+.b-menu-nav {
+	position: fixed;
+	z-index: 100;
+	background-color: #ffffff;
+	box-shadow: 0 2px 24px 0 rgba(83,92,90,.38);
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.b-menu-nav .wrap {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.b-menu-nav .logo {
+	width: 80px;
+}
+.b-menu-nav .logo img {
+	display: block;
+	max-width: 100%;
+}
+.b-menu-nav .nav {
+	width: calc(100% - 180px);
+	max-width: 750px;
+}
+.b-menu-nav .nav ul {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.b-menu-nav .nav ul li {
+	padding: 0 10px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	color: #70544f;
+}
+.b-menu-nav .nav ul li:first-child {
+	padding-left: 0;
+}
+.b-menu-nav .nav ul li:last-child {
+	padding-right: 0;
+}
+.b-menu-nav .nav ul li a {
+	display: block;
+	color: #70544f;
+	padding: 22px 0;
+	position: relative;
+	line-height: 1.2;
+}
+.b-menu-nav .nav ul li a:before {
+	content: '';
+	width: 100%;
+	height: 4px;
+	border-radius: 100px;
+	background-color: #c21313;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.b-menu-nav .nav ul li.active a:before,
+.b-menu-nav .nav ul li a:hover:before {
+	opacity: 1;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+	.b-menu-nav .container {
+		padding: 0;
+	}
+	.b-menu-nav .wrap {
+		display: block;
+	}
+	.b-menu-nav .logo {
+		display: none;
+	}
+	.b-menu-nav .nav {
+		width: 100%;
+	}
+	.b-menu-nav .nav ul {
+		overflow-x: auto;
+		overflow-y: hidden;
+		height: 50px;
+	}
+	.b-menu-nav .nav ul li {
+		height: 100%;
+		font-size: 12px;
+	}
+	.b-menu-nav .nav ul li:first-child {
+		padding-left: 20px;
+	}
+	.b-menu-nav .nav ul li:last-child {
+		padding-right: 20px;
+	}
+	.b-menu-nav .nav ul li a {
+		padding: 0;
+		height: 100%;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	.b-menu-nav .nav ul li a:before {
+		content: none;
+	}
+	.b-menu-nav .nav ul li.active a {
+		color: #009471;
+	}
+}
